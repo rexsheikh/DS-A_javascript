@@ -1,7 +1,6 @@
 var mySqrt = function (x) {
   let left = 1;
   let right = x;
-  // The square root of 0 or 1 is itself
   if (x < 2) {
     return x;
   }
@@ -18,5 +17,5 @@ var mySqrt = function (x) {
   return left - 1;
 };
 
-let test = 10;
-console.log(squareRoot(test, 3));
+
+
