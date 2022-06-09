@@ -1,7 +1,7 @@
 //write a function called isSubsequence which takes in two strings and checks whether
 //the characters in the first string forms a subsequence of the characters in the second
 //string. In other words, the function should check whether the characters in the first
-//string appear somewhere in teh second string without their order changing.
+//string appear somewhere in the second string without their order changing.
 
 //isSubsequence('hello','hello world') //true
 
