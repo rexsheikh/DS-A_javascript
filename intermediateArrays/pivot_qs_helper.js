@@ -19,6 +19,8 @@ function pivot(arr, start=0, end=arr.length+1){
   return swapIdx;
 }
 
+
+
 // Version with ES2015 Syntax
 function pivot(arr, start = 0, end = arr.length - 1) {
   const swap = (arr, idx1, idx2) => {
