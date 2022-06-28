@@ -109,18 +109,16 @@ class DoublyLinkedList {
     this.length++;
     return true;
   }
-}
-
-removeEventListener(index){
-    if(index < 0 || index > this.length) return false;
-    if(index === 0) return this.shift(); 
-    if(index === this.length -1) return this.pop();
-    let removedNode = this.get(index)
+  removeEventListener(index) {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+    let removedNode = this.get(index);
     removedNode.prev.next = removedNode.next; //establish new connections between previous and next nodes. delete old connections to the removed node.
-    removedNode.next.prev = removedNode.prev; 
-    removedNode.next = null; 
+    removedNode.next.prev = removedNode.prev;
+    removedNode.next = null;
     removedNode.prev = null;
-    this.length--; 
+    this.length--;
     return removedNode;
+  }
 }
-
