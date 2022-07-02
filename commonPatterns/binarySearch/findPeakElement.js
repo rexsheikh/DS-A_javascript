@@ -13,7 +13,4 @@ function findPeakElement(arr) {
 //[1,2,3,1] => 2, index of peak element
 //(element that is greater than left and right neighbors)
 
-console.log(findPeakElement([1, 2, 1, 3, 4, 5]));
-
-let arr = [1, 2, 1, 3, 4, 5];
-console.log(arr[-1]);
+// console.log(findPeakElement([1, 2, 1, 3, 4, 5]));
