@@ -29,11 +29,9 @@ function mNumber(nums) {
   let arraySum = 0;
   let totalSum = 0;
   arraySum = nums.reduce((a, b) => a + b);
-  console.log(`arraySum: ${arraySum}`);
 
   for (let i = 0; i < nums.length + 1; i++) {
     totalSum += i;
-    console.log(`totalSum: ${totalSum}`);
   }
   return totalSum - arraySum;
 }
