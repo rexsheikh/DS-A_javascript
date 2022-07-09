@@ -1,14 +1,25 @@
-//insertionSort
-
-function insertionSort(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    let currentVal = arr[i];
-    for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
-      arr[j + 1] = arr[j];
+function kWeakestRows(mat, k) {
+  let hmap = {};
+  let res = [];
+  for (let i = 0; i < mat.length; i++) {
+    hmap[i] = 0;
+    for (let j = 0; j < mat[i].length; j++) {
+      if (mat[i][j] === 1) hmap[i]++;
     }
-    arr[j + 1] = currentVal;
+    res.push(i);
   }
-  return arr;
+  let final = res.sort((a, b) => hmap[a] - hmap[b]);
+  return final.slice(0, k);
 }
 
-console.log(insertionSort([2, 1, 9, 76, 4]));
+let mat = [
+  [1, 1, 0, 0, 0],
+  [1, 1, 1, 1, 0],
+  [1, 0, 0, 0, 0],
+  [1, 1, 0, 0, 0],
+  [1, 1, 1, 1, 1],
+];
+
+let k = 3;
+
+console.log(kWeakestRows(mat, k));
