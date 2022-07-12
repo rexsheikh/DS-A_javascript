@@ -1,25 +1,15 @@
-function kWeakestRows(mat, k) {
-  let hmap = {};
-  let res = [];
-  for (let i = 0; i < mat.length; i++) {
-    hmap[i] = 0;
-    for (let j = 0; j < mat[i].length; j++) {
-      if (mat[i][j] === 1) hmap[i]++;
-    }
-    res.push(i);
-  }
-  let final = res.sort((a, b) => hmap[a] - hmap[b]);
-  return final.slice(0, k);
+function getDigit(num) {
+  return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
 }
 
-let mat = [
-  [1, 1, 0, 0, 0],
-  [1, 1, 1, 1, 0],
-  [1, 0, 0, 0, 0],
-  [1, 1, 0, 0, 0],
-  [1, 1, 1, 1, 1],
-];
+function numDigits(num) {
+  return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
 
-let k = 3;
-
-console.log(kWeakestRows(mat, k));
+function maxDigits(arr) {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    max = Math.max(max, numDigits[arr[i]]);
+  }
+  return max;
+}
