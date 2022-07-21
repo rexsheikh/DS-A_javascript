@@ -1,15 +1,20 @@
-function getDigit(num) {
-  return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
-}
+//find peak element
 
-function numDigits(num) {
-  return Math.floor(Math.log10(Math.abs(num))) + 1;
-}
-
-function maxDigits(arr) {
-  let max = 0;
-  for (let i = 0; i < arr.length; i++) {
-    max = Math.max(max, numDigits[arr[i]]);
+function findPeakElement(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  let mid;
+  while (left + 1 < right) {
+    mid = Math.floor((left + right) / 2);
+    if (arr[mid] >= nums[mid + 1]) {
+      right = mid;
+    } else {
+      left = mid;
+    }
+    if (nums[left] > nums[right]) {
+      return left;
+    } else {
+      return right;
+    }
   }
-  return max;
 }
